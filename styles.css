@@ -169,7 +169,7 @@ body {
 .form__field--currency::before {
   content: "R$";
   position: absolute;
-  top: 2.95rem;
+  top: 3.25rem;
   left: .5rem;
   font-size: 1.2rem;
   color: var(--grey-200);
@@ -392,7 +392,7 @@ iconify-icon {
   }
 
   .form__field--currency::before {
-    top: 3.15rem;
+    top: 3.55rem;
   }
 
   .form--expenses .form__grid {
@@ -486,7 +486,7 @@ iconify-icon {
   }
 
   .form__field--currency::before {
-    top: 3.35rem;
+    top: 3.75rem;
   }
 
   .form--expenses .form__grid {
