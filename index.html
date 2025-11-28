@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#1a2c38" />
+  
+  <!-- SEO -->
+  <title>Calculadora de Gastos - Organize suas Finanças Pessoais</title>
+  <meta name="description" content="Calculadora gratuita para organizar seus gastos mensais, controlar sua renda e descobrir quanto sobra no final do mês. Simples e prática." />
+  <meta name="keywords" content="calculadora de gastos, finanças pessoais, controle financeiro, orçamento familiar, planejamento financeiro" />
+  <meta name="author" content="Calculadora Stake" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://calculadora-stake.com" />
+  
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Calculadora de Gastos - Organize suas Finanças" />
+  <meta property="og:description" content="Organize seus gastos, renda e descubra quanto sobra no mês. Ferramenta gratuita e simples." />
+  <meta property="og:locale" content="pt_BR" />
+  
+  <!-- Performance: Preconnect e preload -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="preload" href="fonts/ProximaNovaRegular.woff" as="font" type="font/woff" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="page" itemscope itemtype="https://schema.org/WebApplication">
+  <main class="calculator" role="main">
+    <section class="calculator__content">
+      <header class="calculator__header">
+        <div class="calculator__title-group">
+          <h1 class="calculator__title" itemprop="name">Calculadora de Gastos</h1>
+          <p class="calculator__subtitle" itemprop="description">
+            Organize seus gastos, renda e descubra a renda disponível.
+          </p>
+        </div>
+      </header>
+
+      <div class="calculator__forms" role="region" aria-label="Formulários de gastos e renda">
+        <form class="form form--expenses" novalidate aria-labelledby="expenses-title">
+          <h2 class="form__title" id="expenses-title">Gastos do Mês</h2>
+          <div class="form__grid">
+            <label class="form__field form__field--currency">
+              <span class="form__label" id="label-aluguel">Casa e Aluguel</span>
+              <p class="form__support" id="desc-aluguel">Quanto você paga onde mora?</p>
+              <input class="form__input" type="number" inputmode="decimal" min="0" step="0.01" name="aluguel" placeholder="0,00" aria-labelledby="label-aluguel" aria-describedby="desc-aluguel" />
+            </label>
+            <label class="form__field form__field--currency">
+              <span class="form__label">Água</span>
+              <p class="form__support">Conta de água do mês</p>
+              <input class="form__input" type="number" inputmode="decimal" min="0" step="0.01" name="agua" placeholder="0,00" />
+            </label>
+            <label class="form__field form__field--currency">
+              <span class="form__label">Luz</span>
+              <p class="form__support">Conta de energia do mês</p>
+              <input class="form__input" type="number" inputmode="decimal" min="0" step="0.01" name="luz" placeholder="0,00" />
+            </label>
+            <label class="form__field form__field--currency">
+              <span class="form__label">Gás de Cozinha</span>
+              <p class="form__support">Botijão ou gás encanado</p>
+              <input class="form__input" type="number" inputmode="decimal" min="0" step="0.01" name="gas" placeholder="0,00" />
+            </label>
+            <label class="form__field form__field--currency">
+              <span class="form__label">Internet / Celular</span>
+              <p class="form__support">Internet ou pacote de celular</p>
+              <input class="form__input" type="number" inputmode="decimal" min="0" step="0.01" name="internet" placeholder="0,00" />
+            </label>
+            <label class="form__field form__field--currency">
+              <span class="form__label">Outras Contas Fixas</span>
+              <p class="form__support">TV, taxas, assinaturas</p>
+              <input class="form__input" type="number" inputmode="decimal" min="0" step="0.01" name="outras-contas" placeholder="0,00" />
+            </label>
+            <label class="form__field form__field--currency">
+              <span class="form__label">Empréstimos e/ou Financiamentos</span>
+              <p class="form__support">Bancos, lojas, carnês</p>
+              <input class="form__input" type="number" inputmode="decimal" min="0" step="0.01" name="emprestimos" placeholder="0,00" />
+            </label>
+            <label class="form__field form__field--currency">
+              <span class="form__label">Cartão de Crédito</span>
+              <p class="form__support">Quanto você paga do cartão</p>
+              <input class="form__input" type="number" inputmode="decimal" min="0" step="0.01" name="cartao" placeholder="0,00" />
+            </label>
+            <label class="form__field">
+              <span class="form__label">Estado</span>
+              <p class="form__support">Selecione seu estado</p>
+              <select class="form__input" name="estado">
+                <option value="" selected disabled></option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+              </select>
+            </label>
+            <label class="form__field form__field--currency">
+              <span class="form__label">Comida / Mercado</span>
+              <p class="form__support">Gasto com comida em casa</p>
+              <input class="form__input" type="number" inputmode="decimal" min="0" step="0.01" name="alimentacao" placeholder="0,00" />
+            </label>
+            <label class="form__field form__field--currency">
+              <span class="form__label">Estudos</span>
+              <p class="form__support">Material, mensalidade, creche</p>
+              <input class="form__input" type="number" inputmode="decimal" min="0" step="0.01" name="educacao" placeholder="0,00" />
+            </label>
+            <label class="form__field form__field--currency">
+              <span class="form__label">Transporte</span>
+              <p class="form__support">Ônibus, carro, moto, app, gasolina</p>
+              <input class="form__input" type="number" inputmode="decimal" min="0" step="0.01" name="mobilidade" placeholder="0,00" />
+            </label>
+            <label class="form__field form__field--currency">
+              <span class="form__label">Outros Gastos</span>
+              <p class="form__support">Tudo que não está acima</p>
+              <input class="form__input" type="number" inputmode="decimal" min="0" step="0.01" name="outras-despesas" placeholder="0,00" />
+            </label>
+          </div>
+          <div class="form__field form__field--full form__field--currency">
+            <span class="form__label">Total dos Gastos</span>
+            <p class="form__support">Somamos tudo pra você</p>
+            <input class="form__input form__input--highlight" type="number" inputmode="decimal" min="0" step="0.01" name="despesas-totais" placeholder="0,00" readonly aria-live="polite" />
+          </div>
+        </form>
+
+        <form class="form form--income" novalidate aria-labelledby="income-title">
+          <h2 class="form__title" id="income-title">Dinheiro que Entra no Mês</h2>
+          <div class="form__column">
+            <label class="form__field">
+              <span class="form__label">Quantidade de pessoas na família</span>
+              <p class="form__support">Inclua você, filhos e quem mora com você</p>
+              <input class="form__input" type="number" inputmode="numeric" min="1" step="1" name="quantidade-familia" placeholder="1" />
+            </label>
+            <label class="form__field form__field--currency">
+              <span class="form__label">Salário</span>
+              <p class="form__support">Quanto você recebe por mês</p>
+              <input class="form__input" type="number" inputmode="decimal" min="0" step="0.01" name="salario" placeholder="0,00" />
+            </label>
+            <label class="form__field form__field--currency">
+              <span class="form__label">Pensão / Ajuda</span>
+              <p class="form__support">Ajuda para filhos / família</p>
+              <input class="form__input" type="number" inputmode="decimal" min="0" step="0.01" name="pensao" placeholder="0,00" />
+            </label>
+            <label class="form__field form__field--currency">
+              <span class="form__label">Benefícios</span>
+              <p class="form__support">Benefícios governamentais, INSS, vale etc.</p>
+              <input class="form__input" type="number" inputmode="decimal" min="0" step="0.01" name="beneficios" placeholder="0,00" />
+            </label>
+            <label class="form__field form__field--currency">
+              <span class="form__label">Outras rendas</span>
+              <p class="form__support">Bicos, freelas, extras</p>
+              <input class="form__input" type="number" inputmode="decimal" min="0" step="0.01" name="outras-receitas" placeholder="0,00" />
+            </label>
+          </div>
+          <div class="form__field form__field--full form__field--currency">
+            <span class="form__label">Total da Renda</span>
+            <p class="form__support">Somamos tudo pra você</p>
+            <input class="form__input form__input--highlight" type="number" inputmode="decimal" min="0" step="0.01" name="renda-total" placeholder="0,00" readonly aria-live="polite" />
+          </div>
+        </form>
+      </div>
+      <aside class="calculator__summary calculator__summary--hidden" id="mensagens-de-apoio" role="complementary" aria-label="Dicas e alertas financeiros">
+        <article class="summary-card">
+          <div class="summary-card__content" aria-live="polite">
+          </div>
+        </article>
+      </aside>
+      <section class="calculator__summary calculator__summary--result" aria-labelledby="result-label">
+        <article class="summary-card">
+          <div class="summary-card__content">
+            <h2 class="summary-card__label" id="result-label">Quanto Sobra no Mês</h2>
+            <p class="summary-card__value" aria-live="polite" aria-atomic="true">R$ 0,00</p>
+            <p class="summary-card__description">
+              Esse é o dinheiro que sobra depois de pagar tudo. Se sobrar pouco, é melhor evitar riscos.
+            </p>
+          </div>
+        </article>
+      </section>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@3.0.0/dist/iconify-icon.min.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+
+</html>
